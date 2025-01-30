@@ -1,0 +1,24 @@
+{
+  "name": "cardgame-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev:server": "concurrently \"npx tsc\" \"npx nodemon\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.12.0",
+    "@types/socket.io": "^3.0.1",
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9",
+    "typescript": "^5.7.3"
+  }
+}
