@@ -6,6 +6,8 @@ const allPlayers: Player[] = [];
 function createNewPlayer(ws: WebSocket) {
   try {
     console.log("creating new player");
+    let p = findPlayer(ws);
+    if (p) throw new Error("Player already exists");
     const player = new Player(ws);
     allPlayers.push(player);
     ws.send(
@@ -16,6 +18,9 @@ function createNewPlayer(ws: WebSocket) {
     );
   } catch (err) {
     console.log(err);
+    ws.send(
+      JSON.stringify({ event: "error", payload: (err as Error).message }),
+    );
   }
 }
 
@@ -43,4 +48,8 @@ function removePlayer(ws: WebSocket) {
   }
 }
 
-export { createNewPlayer, getAllPlayers, removePlayer };
+function findPlayer(ws: WebSocket) {
+  return allPlayers.find((player) => player.conn === ws);
+}
+
+export { createNewPlayer, getAllPlayers, removePlayer, findPlayer };

@@ -4,6 +4,8 @@ import {
   getAllPlayers,
   removePlayer,
 } from "./middlewares/handlePlayers";
+import { createRoom, joinRoom } from "./middlewares/handleRooms";
+import { SocketData } from "./types/SocketData";
 import { Server } from "ws";
 
 const app = express();
@@ -15,10 +17,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 // websocket connection
-type SocketData = {
-  event: string;
-  data: string;
-};
+
 wss.on("connection", (ws) => {
   console.log("client connected");
   ws.on("message", (payload: string) => {
@@ -29,6 +28,12 @@ wss.on("connection", (ws) => {
         break;
       case "get-all-players":
         getAllPlayers(ws);
+        break;
+      case "create-new-room":
+        createRoom(ws);
+        break;
+      case "join-room":
+        joinRoom(data, ws);
         break;
     }
   });
