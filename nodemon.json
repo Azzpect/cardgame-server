@@ -1,7 +1,7 @@
 {
-    "exec": "node --env-file=.env.local ./dist/index.js",
-    "ignore": ["node_modules"],
-    "watch": ["dist/"],
-    "ext": "js, json",
-    "delay": "2000"
+  "exec": "node --env-file=.env.local ./dist/app.js",
+  "ignore": ["node_modules"],
+  "watch": ["dist/"],
+  "ext": "js, json",
+  "delay": "2000"
 }
