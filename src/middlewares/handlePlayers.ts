@@ -13,7 +13,7 @@ function createNewPlayer(ws: WebSocket) {
     ws.send(
       JSON.stringify({
         event: "create-new-player",
-        data: JSON.stringify(player),
+        payload: JSON.stringify(player),
       }),
     );
   } catch (err) {
@@ -29,7 +29,7 @@ function getAllPlayers(ws: WebSocket) {
     ws.send(
       JSON.stringify({
         event: "get-all-players",
-        data: allPlayers,
+        payload: allPlayers,
       }),
     );
   } catch (err) {

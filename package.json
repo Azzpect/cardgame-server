@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev:server": "concurrently \"npx tsc\" \"npx nodemon\""
+    "dev:server": "concurrently \"npx tsc --watch\" \"npx nodemon\""
   },
   "keywords": [],
   "author": "",

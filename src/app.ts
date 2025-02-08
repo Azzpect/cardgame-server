@@ -10,7 +10,8 @@ import { Server } from "ws";
 
 const app = express();
 const port = process.env.PORT || 3000;
-const wss = new Server({ port: 5000 });
+const wsPort = parseInt(process.env.WSPORT as string) || 5000;
+const wss = new Server({ port: wsPort });
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Hello World");
@@ -21,20 +22,24 @@ app.get("/", (req: Request, res: Response) => {
 wss.on("connection", (ws) => {
   console.log("client connected");
   ws.on("message", (payload: string) => {
-    const data: SocketData = JSON.parse(payload);
-    switch (data.event) {
-      case "create-new-player":
-        createNewPlayer(ws);
-        break;
-      case "get-all-players":
-        getAllPlayers(ws);
-        break;
-      case "create-new-room":
-        createRoom(ws);
-        break;
-      case "join-room":
-        joinRoom(data, ws);
-        break;
+    try {
+      const data: SocketData = JSON.parse(payload);
+      switch (data.event) {
+        case "create-new-player":
+          createNewPlayer(ws);
+          break;
+        case "get-all-players":
+          getAllPlayers(ws);
+          break;
+        case "create-new-room":
+          createRoom(ws);
+          break;
+        case "join-room":
+          joinRoom(data, ws);
+          break;
+      }
+    } catch (err) {
+      console.log(err);
     }
   });
   ws.on("close", () => {
