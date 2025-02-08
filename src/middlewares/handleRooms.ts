@@ -37,6 +37,14 @@ function joinRoom(data: SocketData, ws: WebSocket) {
       throw new Error("Player already in the room");
     room.players.push(player);
 
+    room.players.forEach((player) => {
+      if (player.conn !== ws) {
+        player.conn.send(
+          JSON.stringify({ event: "player-joined", payload: room.players }),
+        );
+      }
+    });
+
     ws.send(JSON.stringify({ event: "join-room", payload: room }));
   } catch (err) {
     console.log(err);
