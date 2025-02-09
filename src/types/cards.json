@@ -1,0 +1,262 @@
+[
+  {
+    "suite": "spades",
+    "rank": 1,
+    "image": "/cards/AS.png"
+  },
+  {
+    "suite": "spades",
+    "rank": 2,
+    "image": "/cards/2S.png"
+  },
+  {
+    "suite": "spades",
+    "rank": 3,
+    "image": "/cards/3S.png"
+  },
+  {
+    "suite": "spades",
+    "rank": 4,
+    "image": "/cards/4S.png"
+  },
+  {
+    "suite": "spades",
+    "rank": 5,
+    "image": "/cards/5S.png"
+  },
+  {
+    "suite": "spades",
+    "rank": 6,
+    "image": "/cards/6S.png"
+  },
+  {
+    "suite": "spades",
+    "rank": 7,
+    "image": "/cards/7S.png"
+  },
+  {
+    "suite": "spades",
+    "rank": 8,
+    "image": "/cards/8S.png"
+  },
+  {
+    "suite": "spades",
+    "rank": 9,
+    "image": "/cards/9S.png"
+  },
+  {
+    "suite": "spades",
+    "rank": 10,
+    "image": "/cards/10S.png"
+  },
+  {
+    "suite": "spades",
+    "rank": 11,
+    "image": "/cards/JS.png"
+  },
+  {
+    "suite": "spades",
+    "rank": 12,
+    "image": "/cards/QS.png"
+  },
+  {
+    "suite": "spades",
+    "rank": 13,
+    "image": "/cards/KS.png"
+  },
+  {
+    "suite": "hearts",
+    "rank": 1,
+    "image": "/cards/AH.png"
+  },
+  {
+    "suite": "hearts",
+    "rank": 2,
+    "image": "/cards/2H.png"
+  },
+  {
+    "suite": "hearts",
+    "rank": 3,
+    "image": "/cards/3H.png"
+  },
+  {
+    "suite": "hearts",
+    "rank": 4,
+    "image": "/cards/4H.png"
+  },
+  {
+    "suite": "hearts",
+    "rank": 5,
+    "image": "/cards/5H.png"
+  },
+  {
+    "suite": "hearts",
+    "rank": 6,
+    "image": "/cards/6H.png"
+  },
+  {
+    "suite": "hearts",
+    "rank": 7,
+    "image": "/cards/7H.png"
+  },
+  {
+    "suite": "hearts",
+    "rank": 8,
+    "image": "/cards/8H.png"
+  },
+  {
+    "suite": "hearts",
+    "rank": 9,
+    "image": "/cards/9H.png"
+  },
+  {
+    "suite": "hearts",
+    "rank": 10,
+    "image": "/cards/10H.png"
+  },
+  {
+    "suite": "hearts",
+    "rank": 11,
+    "image": "/cards/JH.png"
+  },
+  {
+    "suite": "hearts",
+    "rank": 12,
+    "image": "/cards/QH.png"
+  },
+  {
+    "suite": "hearts",
+    "rank": 13,
+    "image": "/cards/KH.png"
+  },
+  {
+    "suite": "diamonds",
+    "rank": 1,
+    "image": "/cards/AD.png"
+  },
+  {
+    "suite": "diamonds",
+    "rank": 2,
+    "image": "/cards/2D.png"
+  },
+  {
+    "suite": "diamonds",
+    "rank": 3,
+    "image": "/cards/3D.png"
+  },
+  {
+    "suite": "diamonds",
+    "rank": 4,
+    "image": "/cards/4D.png"
+  },
+  {
+    "suite": "diamonds",
+    "rank": 5,
+    "image": "/cards/5D.png"
+  },
+  {
+    "suite": "diamonds",
+    "rank": 6,
+    "image": "/cards/6D.png"
+  },
+  {
+    "suite": "diamonds",
+    "rank": 7,
+    "image": "/cards/7D.png"
+  },
+  {
+    "suite": "diamonds",
+    "rank": 8,
+    "image": "/cards/8D.png"
+  },
+  {
+    "suite": "diamonds",
+    "rank": 9,
+    "image": "/cards/9D.png"
+  },
+  {
+    "suite": "diamonds",
+    "rank": 10,
+    "image": "/cards/10D.png"
+  },
+  {
+    "suite": "diamonds",
+    "rank": 11,
+    "image": "/cards/JD.png"
+  },
+  {
+    "suite": "diamonds",
+    "rank": 12,
+    "image": "/cards/QD.png"
+  },
+  {
+    "suite": "diamonds",
+    "rank": 13,
+    "image": "/cards/KD.png"
+  },
+  {
+    "suite": "clubs",
+    "rank": 1,
+    "image": "/cards/AC.png"
+  },
+  {
+    "suite": "clubs",
+    "rank": 2,
+    "image": "/cards/2C.png"
+  },
+  {
+    "suite": "clubs",
+    "rank": 3,
+    "image": "/cards/3C.png"
+  },
+  {
+    "suite": "clubs",
+    "rank": 4,
+    "image": "/cards/4C.png"
+  },
+  {
+    "suite": "clubs",
+    "rank": 5,
+    "image": "/cards/5C.png"
+  },
+  {
+    "suite": "clubs",
+    "rank": 6,
+    "image": "/cards/6C.png"
+  },
+  {
+    "suite": "clubs",
+    "rank": 7,
+    "image": "/cards/7C.png"
+  },
+  {
+    "suite": "clubs",
+    "rank": 8,
+    "image": "/cards/8C.png"
+  },
+  {
+    "suite": "clubs",
+    "rank": 9,
+    "image": "/cards/9C.png"
+  },
+  {
+    "suite": "clubs",
+    "rank": 10,
+    "image": "/cards/10C.png"
+  },
+  {
+    "suite": "clubs",
+    "rank": 11,
+    "image": "/cards/JC.png"
+  },
+  {
+    "suite": "clubs",
+    "rank": 12,
+    "image": "/cards/QC.png"
+  },
+  {
+    "suite": "clubs",
+    "rank": 13,
+    "image": "/cards/KC.png"
+  }
+]

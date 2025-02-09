@@ -4,9 +4,10 @@ import {
   getAllPlayers,
   removePlayer,
 } from "./middlewares/handlePlayers";
-import { createRoom, joinRoom } from "./middlewares/handleRooms";
+import { createRoom, joinRoom, serveHand } from "./middlewares/handleRooms";
 import { SocketData } from "./types/SocketData";
 import { Server } from "ws";
+import { Stats } from "node:fs";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -36,6 +37,9 @@ wss.on("connection", (ws) => {
           break;
         case "join-room":
           joinRoom(data, ws);
+          break;
+        case "serve-hand":
+          serveHand(data.payload as string, ws);
           break;
       }
     } catch (err) {

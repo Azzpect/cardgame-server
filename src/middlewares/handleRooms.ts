@@ -25,6 +25,10 @@ function findPlayerInRoom(room: Room, ws: WebSocket) {
   return room.players.find((player) => player.conn === ws);
 }
 
+function findRoom(roomId: string) {
+  return allRooms.find((room) => room.id === roomId);
+}
+
 function joinRoom(data: SocketData, ws: WebSocket) {
   try {
     if (typeof data.payload !== "string") throw new Error("Invalid room id");
@@ -54,4 +58,22 @@ function joinRoom(data: SocketData, ws: WebSocket) {
   }
 }
 
-export { createRoom, joinRoom };
+function serveHand(roomId: string, ws: WebSocket) {
+  try {
+    let room = findRoom(roomId);
+    if (!room) throw new Error("Room not found");
+    if (room.players.length < 2) throw new Error("Not enough players");
+    room.serveHand();
+    room.players.forEach((player) => {
+      player.conn.send(
+        JSON.stringify({ event: "serve-hand", payload: player }),
+      );
+    });
+  } catch (err) {
+    ws.send(
+      JSON.stringify({ event: "error", payload: (err as Error).message }),
+    );
+  }
+}
+
+export { createRoom, joinRoom, serveHand };
