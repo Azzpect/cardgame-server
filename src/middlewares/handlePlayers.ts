@@ -13,7 +13,7 @@ function createNewPlayer(ws: WebSocket) {
     ws.send(
       JSON.stringify({
         event: "create-new-player",
-        payload: JSON.stringify(player),
+        payload: player.id,
       }),
     );
   } catch (err) {
