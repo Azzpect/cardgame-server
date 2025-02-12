@@ -6,7 +6,7 @@ export default class Deck {
   cards: Card[];
   constructor() {
     this.cards = JSON.parse(
-      readFileSync(path.join(__dirname, "./cards.json"), "utf8"),
+      readFileSync(path.join(__dirname, "../../data/cards.json"), "utf8"),
     );
     this.shuffle();
   }
